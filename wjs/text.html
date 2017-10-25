@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>感觉自己挺好的</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- hack -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .bao{
+            display: inline;
+            border:1px solid green;
+            color: green;
+            margin-right: 10px;
+        }
+        .bei{
+              display: inline;
+              border:1px solid red;
+              color: red;
+
+    </style>
+</head>
+<body>
+<span class="bao" data-toggle="tooltip" data-placement="bottom" title="我还是个宝宝">宝</span>
+<span class="bei" data-toggle="tooltip" data-placement="bottom" title="我也还是个宝宝">北</span>
+</body>
+</html>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        var str = '<img src="./images/code.jpg">';
+        $("#sj-erweima").popover({
+            trigger:'hover',//manual 触发方式
+            placement : 'bottom',
+            html: 'true',
+            content :str,  //这里可以直接写字符串，也可以 是一个函数，该函数返回一个字符串；
+            animation: false
+        });
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+</script>
